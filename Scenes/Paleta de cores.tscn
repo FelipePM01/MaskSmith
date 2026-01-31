@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dkuaq273ljlj"]
+
+[ext_resource type="Script" uid="uid://daxmxq20ngo5d" path="res://Scripts/Paleta.gd" id="1_p3uid"]
+[ext_resource type="Texture2D" uid="uid://drhbhscwdeegu" path="res://Assets/Images/GGJ_asset_paleta.png" id="1_poywf"]
+[ext_resource type="Texture2D" uid="uid://b1x6e88pkqc2t" path="res://Assets/Images/GGJ_asset_paleta_highlights.png" id="2_p3uid"]
+
+[node name="Botão Paleta" type="Button" unique_id=1061982498]
+offset_right = 290.0
+offset_bottom = 242.0
+flat = true
+script = ExtResource("1_p3uid")
+
+[node name="Paleta" type="Sprite2D" parent="." unique_id=164081296]
+position = Vector2(145, 121)
+scale = Vector2(0.29, 0.3)
+texture = ExtResource("1_poywf")
+
+[node name="Paleta Highlight" type="Sprite2D" parent="." unique_id=1148636165]
+visible = false
+position = Vector2(145, 121)
+scale = Vector2(0.29, 0.3)
+texture = ExtResource("2_p3uid")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

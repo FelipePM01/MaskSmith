@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bra2ruhd0q8ll"]
+
+[ext_resource type="Texture2D" uid="uid://pd1j2ekje0gh" path="res://Assets/Images/GGJ_asset_gaveta.png" id="1_c83b6"]
+[ext_resource type="Script" uid="uid://clryocdumgwfi" path="res://Scripts/Gaveta.gd" id="1_d87i1"]
+[ext_resource type="Texture2D" uid="uid://7g5ivmc48wsj" path="res://Assets/Images/GGJ_asset_gaveta_mascaras_highlight.png" id="3_kpa3u"]
+[ext_resource type="AudioStream" uid="uid://b6c5v8do37o7n" path="res://Assets/Sounds/Drawer_opened.wav" id="4_kpa3u"]
+
+[node name="Gaveta" type="Button" unique_id=1239233834]
+offset_right = 302.0
+offset_bottom = 375.0
+flat = true
+script = ExtResource("1_d87i1")
+
+[node name="Gaveta de máscaras" type="Sprite2D" parent="." unique_id=1821709305]
+position = Vector2(150, 195)
+scale = Vector2(0.288, 0.27)
+texture = ExtResource("1_c83b6")
+
+[node name="Gaveta Highlight" type="Sprite2D" parent="." unique_id=1268049132]
+visible = false
+position = Vector2(150, 195)
+scale = Vector2(0.292, 0.27)
+texture = ExtResource("3_kpa3u")
+
+[node name="Abrir Gaveta" type="AudioStreamPlayer2D" parent="." unique_id=1563569759]
+stream = ExtResource("4_kpa3u")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bhh35bhpa03qe"]
+
+[ext_resource type="Texture2D" uid="uid://ctoppc1c6yggh" path="res://Assets/Images/GGJ_workbench_01.png" id="1_idj7w"]
+[ext_resource type="Texture2D" uid="uid://dsq5qeinl1ysj" path="res://Assets/icon.svg" id="2_kln2b"]
+[ext_resource type="PackedScene" uid="uid://dkuaq273ljlj" path="res://Scenes/Paleta de cores.tscn" id="2_rgh2o"]
+[ext_resource type="PackedScene" uid="uid://d2mg4bjdmdqsk" path="res://Scenes/Hud.tscn" id="3_kln2b"]
+[ext_resource type="PackedScene" uid="uid://bra2ruhd0q8ll" path="res://Scenes/Gaveta.tscn" id="5_pbw6q"]
+
+[node name="Node2D" type="Node2D" unique_id=1323453430]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1805127349]
+position = Vector2(686, 364)
+scale = Vector2(0.8171875, 0.8020833)
+texture = ExtResource("1_idj7w")
+
+[node name="Botão Paleta" parent="." unique_id=1061982498 instance=ExtResource("2_rgh2o")]
+offset_left = 83.0
+offset_top = 436.0
+offset_right = 373.0
+offset_bottom = 678.0
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1127642224]
+position = Vector2(1116, 169.00003)
+rotation = 0.34506753
+scale = Vector2(1.5862808, 1.5784194)
+texture = ExtResource("2_kln2b")
+
+[node name="Icon3" type="Sprite2D" parent="." unique_id=1714832582]
+position = Vector2(681.6223, 333.6321)
+rotation = -0.0011271238
+scale = Vector2(2.7911856, 3.7270741)
+skew = 0.00316298
+texture = ExtResource("2_kln2b")
+
+[node name="Gaveta" parent="." unique_id=1239233834 instance=ExtResource("5_pbw6q")]
+offset_left = 112.0
+offset_top = -331.0
+offset_right = 414.0
+offset_bottom = 44.0
+
+[node name="Hud" parent="." unique_id=1201131828 instance=ExtResource("3_kln2b")]
