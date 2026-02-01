@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://f0qudvpjsa5j"]
+
+[ext_resource type="Script" uid="uid://b385hlhljtjej" path="res://Scripts/Pedras.gd" id="1_4mdag"]
+[ext_resource type="Texture2D" uid="uid://dh7o7gyxwu48l" path="res://Assets/Images/GGJ_asset_pedras_base.png" id="1_376fv"]
+[ext_resource type="Texture2D" uid="uid://bwer32lbs0pj2" path="res://Assets/Images/GGJ_asset_pedras_highlight.png" id="2_4mdag"]
+
+[node name="Pedras" type="Button" unique_id=1806674113]
+offset_right = 302.0
+offset_bottom = 224.0
+flat = true
+expand_icon = true
+script = ExtResource("1_4mdag")
+
+[node name="Pedras de decoração" type="Sprite2D" parent="." unique_id=1860063012]
+position = Vector2(150, 110)
+scale = Vector2(0.27, 0.275)
+texture = ExtResource("1_376fv")
+
+[node name="Pedras highlight" type="Sprite2D" parent="." unique_id=744670882]
+visible = false
+position = Vector2(150, 110)
+scale = Vector2(0.275, 0.275)
+texture = ExtResource("2_4mdag")
