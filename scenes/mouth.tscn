@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bx806dcbp8k7r"]
+
+[ext_resource type="Script" uid="uid://eqj0emxb17wb" path="res://scripts/mouth.gd" id="1_7m7cr"]
+
+[node name="Mouth" type="Node2D" unique_id=1185821148]
+script = ExtResource("1_7m7cr")
