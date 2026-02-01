@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bduvaj3c2ylf6"]
+
+[ext_resource type="Script" uid="uid://wdjo4241skk8" path="res://scripts/game_controller.gd" id="1_hi4ye"]
+[ext_resource type="PackedScene" uid="uid://bcygg4frbyp33" path="res://scenes/letter.tscn" id="2_jbxdk"]
+[ext_resource type="PackedScene" uid="uid://cyvvff8q84mv8" path="res://scenes/mask.tscn" id="3_jbxdk"]
+
+[node name="GameController" type="Node" unique_id=1406171159]
+script = ExtResource("1_hi4ye")
+
+[node name="Letter" parent="." unique_id=348843882 instance=ExtResource("2_jbxdk")]
+target_elegance = 1.0
+
+[node name="Mask" parent="." unique_id=2064774242 instance=ExtResource("3_jbxdk")]
+position = Vector2(575, 355)
