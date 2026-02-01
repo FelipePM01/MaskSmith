@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dsq5qeinl1ysj" path="res://Assets/icon.svg" id="2_kln2b"]
 [ext_resource type="PackedScene" uid="uid://dkuaq273ljlj" path="res://Scenes/Paleta de cores.tscn" id="2_rgh2o"]
 [ext_resource type="PackedScene" uid="uid://d2mg4bjdmdqsk" path="res://Scenes/Hud.tscn" id="3_kln2b"]
+[ext_resource type="PackedScene" uid="uid://f0qudvpjsa5j" path="res://Scenes/Pedras.tscn" id="4_v1gob"]
 [ext_resource type="PackedScene" uid="uid://bra2ruhd0q8ll" path="res://Scenes/Gaveta.tscn" id="5_pbw6q"]
 
 [node name="Node2D" type="Node2D" unique_id=1323453430]
@@ -13,24 +14,26 @@ position = Vector2(686, 364)
 scale = Vector2(0.8171875, 0.8020833)
 texture = ExtResource("1_idj7w")
 
-[node name="Botão Paleta" parent="." unique_id=1061982498 instance=ExtResource("2_rgh2o")]
-offset_left = 83.0
-offset_top = 436.0
-offset_right = 373.0
-offset_bottom = 678.0
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=1127642224]
-position = Vector2(1116, 169.00003)
-rotation = 0.34506753
-scale = Vector2(1.5862808, 1.5784194)
-texture = ExtResource("2_kln2b")
-
 [node name="Icon3" type="Sprite2D" parent="." unique_id=1714832582]
 position = Vector2(681.6223, 333.6321)
 rotation = -0.0011271238
 scale = Vector2(2.7911856, 3.7270741)
 skew = 0.00316298
 texture = ExtResource("2_kln2b")
+
+[node name="Botão Paleta" parent="." unique_id=1061982498 instance=ExtResource("2_rgh2o")]
+offset_left = 83.0
+offset_top = 436.0
+offset_right = 373.0
+offset_bottom = 678.0
+
+[node name="Pedras" parent="Botão Paleta" unique_id=1806674113 instance=ExtResource("4_v1gob")]
+layout_mode = 0
+offset_left = 899.0001
+offset_top = -442.99994
+offset_right = 1201.0001
+offset_bottom = -218.99994
+rotation = 0.45095184
 
 [node name="Gaveta" parent="." unique_id=1239233834 instance=ExtResource("5_pbw6q")]
 offset_left = 112.0
