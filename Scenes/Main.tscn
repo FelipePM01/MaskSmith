@@ -21,19 +21,18 @@ scale = Vector2(2.7911856, 3.7270741)
 skew = 0.00316298
 texture = ExtResource("2_kln2b")
 
+[node name="Pedras" parent="." unique_id=1806674113 instance=ExtResource("4_v1gob")]
+offset_left = 982.0001
+offset_top = -6.999939
+offset_right = 1284.0001
+offset_bottom = 217.00006
+rotation = 0.45095184
+
 [node name="Botão Paleta" parent="." unique_id=1061982498 instance=ExtResource("2_rgh2o")]
 offset_left = 83.0
 offset_top = 436.0
 offset_right = 373.0
 offset_bottom = 678.0
-
-[node name="Pedras" parent="Botão Paleta" unique_id=1806674113 instance=ExtResource("4_v1gob")]
-layout_mode = 0
-offset_left = 899.0001
-offset_top = -442.99994
-offset_right = 1201.0001
-offset_bottom = -218.99994
-rotation = 0.45095184
 
 [node name="Gaveta" parent="." unique_id=1239233834 instance=ExtResource("5_pbw6q")]
 offset_left = 112.0
