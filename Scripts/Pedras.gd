@@ -14,3 +14,7 @@ func _process(delta: float) -> void:
 		pedras_highlight.visible = true
 	else:
 		pedras_highlight.visible = false
+
+
+func _on_pressed() -> void:
+	$"../Mask".set_stones()

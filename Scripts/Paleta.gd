@@ -14,3 +14,7 @@ func _process(_delta: float) -> void:
 		paleta_highlight.visible = true
 	else:
 		paleta_highlight.visible = false
+
+
+func _on_pressed() -> void:
+	$"../Mask".set_color()

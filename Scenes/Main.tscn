@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bhh35bhpa03qe"]
 
 [ext_resource type="Texture2D" uid="uid://ctoppc1c6yggh" path="res://Assets/Images/GGJ_workbench_01.png" id="1_idj7w"]
-[ext_resource type="Texture2D" uid="uid://dsq5qeinl1ysj" path="res://Assets/icon.svg" id="2_kln2b"]
 [ext_resource type="PackedScene" uid="uid://dkuaq273ljlj" path="res://Scenes/Paleta de cores.tscn" id="2_rgh2o"]
 [ext_resource type="PackedScene" uid="uid://d2mg4bjdmdqsk" path="res://Scenes/Hud.tscn" id="3_kln2b"]
 [ext_resource type="PackedScene" uid="uid://f0qudvpjsa5j" path="res://Scenes/Pedras.tscn" id="4_v1gob"]
 [ext_resource type="PackedScene" uid="uid://bra2ruhd0q8ll" path="res://Scenes/Gaveta.tscn" id="5_pbw6q"]
+[ext_resource type="PackedScene" uid="uid://cyvvff8q84mv8" path="res://Scenes/mask.tscn" id="6_v1gob"]
 
 [node name="Node2D" type="Node2D" unique_id=1323453430]
 
@@ -13,13 +13,6 @@
 position = Vector2(686, 364)
 scale = Vector2(0.8171875, 0.8020833)
 texture = ExtResource("1_idj7w")
-
-[node name="Icon3" type="Sprite2D" parent="." unique_id=1714832582]
-position = Vector2(681.6223, 333.6321)
-rotation = -0.0011271238
-scale = Vector2(2.7911856, 3.7270741)
-skew = 0.00316298
-texture = ExtResource("2_kln2b")
 
 [node name="Pedras" parent="." unique_id=1806674113 instance=ExtResource("4_v1gob")]
 offset_left = 982.0001
@@ -41,3 +34,10 @@ offset_right = 414.0
 offset_bottom = 44.0
 
 [node name="Hud" parent="." unique_id=1201131828 instance=ExtResource("3_kln2b")]
+
+[node name="Mask" parent="." unique_id=1332497472 instance=ExtResource("6_v1gob")]
+position = Vector2(682, 386)
+
+[connection signal="pressed" from="Pedras" to="Pedras" method="_on_pressed"]
+[connection signal="pressed" from="Botão Paleta" to="Botão Paleta" method="_on_pressed"]
+[connection signal="pressed" from="Gaveta" to="Gaveta" method="_on_pressed"]

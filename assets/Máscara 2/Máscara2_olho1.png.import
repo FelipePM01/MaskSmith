@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8eeymgjltvrk"
-path="res://.godot/imported/Máscara2_olho1.png-d6765519a5171fd140694e092f204baf.ctex"
+path="res://.godot/imported/Máscara2_olho1.png-19b5803fda57feef99a0275c4e6bec86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Máscara 2/Máscara2_olho1.png"
-dest_files=["res://.godot/imported/Máscara2_olho1.png-d6765519a5171fd140694e092f204baf.ctex"]
+source_file="res://Assets/Máscara 2/Máscara2_olho1.png"
+dest_files=["res://.godot/imported/Máscara2_olho1.png-19b5803fda57feef99a0275c4e6bec86.ctex"]
 
 [params]
 

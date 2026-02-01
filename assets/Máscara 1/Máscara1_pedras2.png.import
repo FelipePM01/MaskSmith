@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnpg0sheadmn1"
-path="res://.godot/imported/Máscara1_pedras2.png-a2b9b7049c71a5af53f981dd444aa62c.ctex"
+path="res://.godot/imported/Máscara1_pedras2.png-2b5851e8897c3930ee6d0222d8d4c730.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Máscara 1/Máscara1_pedras2.png"
-dest_files=["res://.godot/imported/Máscara1_pedras2.png-a2b9b7049c71a5af53f981dd444aa62c.ctex"]
+source_file="res://Assets/Máscara 1/Máscara1_pedras2.png"
+dest_files=["res://.godot/imported/Máscara1_pedras2.png-2b5851e8897c3930ee6d0222d8d4c730.ctex"]
 
 [params]
 

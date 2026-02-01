@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2appit2ppfcd"
-path="res://.godot/imported/Máscara1_arabesco1.png-9657fa94b2220b5b5fee26714120f16c.ctex"
+path="res://.godot/imported/Máscara1_arabesco1.png-33492604241f424d8a3fae80bad1ce08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Máscara 1/Máscara1_arabesco1.png"
-dest_files=["res://.godot/imported/Máscara1_arabesco1.png-9657fa94b2220b5b5fee26714120f16c.ctex"]
+source_file="res://Assets/Máscara 1/Máscara1_arabesco1.png"
+dest_files=["res://.godot/imported/Máscara1_arabesco1.png-33492604241f424d8a3fae80bad1ce08.ctex"]
 
 [params]
 

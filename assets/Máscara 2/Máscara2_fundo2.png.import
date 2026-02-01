@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfblcspovm7e5"
-path="res://.godot/imported/Máscara2_fundo2.png-7625aee1327a8eda948f6f4579291554.ctex"
+path="res://.godot/imported/Máscara2_fundo2.png-c3197291cd120006fc2d1852d92fc208.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Máscara 2/Máscara2_fundo2.png"
-dest_files=["res://.godot/imported/Máscara2_fundo2.png-7625aee1327a8eda948f6f4579291554.ctex"]
+source_file="res://Assets/Máscara 2/Máscara2_fundo2.png"
+dest_files=["res://.godot/imported/Máscara2_fundo2.png-c3197291cd120006fc2d1852d92fc208.ctex"]
 
 [params]
 

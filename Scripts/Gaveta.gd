@@ -24,3 +24,7 @@ func _on_mouse_entered() -> void:
 func _on_mouse_exited() -> void:
 	gaveta.position.y -= 300
 	abrir_gaveta.play()
+
+
+func _on_pressed() -> void:
+	$"../Mask".set_model()

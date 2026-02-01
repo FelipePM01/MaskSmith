@@ -1,9 +1,4 @@
 extends Node
-#@onready var model
-#@onready var pattern
-#@onready var eyes
-#@onready var mouth
-#@onready var acessory
 @onready var model_number=0
 @onready var contour_number=0
 @onready  var details_number=0
@@ -15,95 +10,87 @@ extends Node
 @onready var arabesque_number=0
 @onready var side_number=0
 @onready var forehead_number=0
-
-func _ready() -> void:
-	set_model(3)
-	set_color(1)
-	set_eyes(1)
-	set_mouth(1)
-	set_rod(1)
-	set_side(1)
-	set_details(1)
-	set_arabesque(1)
-	set_stones(1)
-func set_model(model_number:int):
-	if model_number!=0:
-		self.model_number=model_number
-		$Shape.texture=load("res://assets/Máscara %d/Máscara%d.png"%[model_number,model_number])
-		$Eyes.texture=null
-		$Mouth.texture=null
-		$Contour.texture=null
-		$Forehead.texture=null
-		$Side.texture=null
-		$Details.texture=null
-		$Arabesque.texture=null
-		$Stones.texture=null
-		$Rod.texture=null
-		
-func set_color(color_number:int):
-	if color_number!=0:
-		self.color_number=color_number
-		$Shape.texture=load("res://assets/Máscara %d/Máscara%d_fundo%d.png"%[model_number,model_number,color_number])
+@onready var selected_matrix = [
+	[0, 0, 0],
+	[0, 0, 0],
+	[0, 0, 0],
+	[0, 0, 0],
+	[0, 0, 0],
+	[0, 0, 0],
+	[0, 0, 0],
+	[0, 0, 0],
+	[0, 0, 0],
+	[0, 0, 0]
+]
+func set_model():
+	selected_matrix[0][model_number]=0
+	model_number=(model_number+1)%4
+	$Shape.texture=load("res://assets/Máscara %d/Máscara%d.png"%[model_number+1,model_number+1])
+	$Eyes.texture=null
+	$Mouth.texture=null
+	$Contour.texture=null
+	$Forehead.texture=null
+	$Side.texture=null
+	$Details.texture=null
+	$Arabesque.texture=null
+	$Stones.texture=null
+	$Rod.texture=null
+	selected_matrix[0][model_number]=1
 	
+	
+func set_color():
+	selected_matrix[1][color_number]=0
+	color_number=(color_number+1)%3
+	$Shape.texture=load("res://assets/Máscara %d/Máscara%d_fundo%d.png"%[model_number+1,model_number+1,color_number+1])
+	selected_matrix[1][color_number]=1
 	
 func set_eyes(eyes_number:int):
-	if eyes_number!=0:
-		self.eyes_number=eyes_number
-		$Eyes.texture=load("res://assets/Máscara %d/Máscara%d_olho%d.png"%[model_number,model_number,eyes_number])
-	
+	selected_matrix[7][eyes_number]=0
+	eyes_number=(eyes_number+1)%4
+	$Eyes.texture=load("res://assets/Máscara %d/Máscara%d_olho%d.png"%[model_number+1,model_number+1,eyes_number+1])
+	selected_matrix[7][eyes_number]=1
 	
 func set_mouth(mouth_number):
-	if mouth_number!=0:
-		self.mouth_number=mouth_number
-		$Mouth.texture=load("res://assets/Máscara %d/Máscara%d_boca%d.png"%[model_number,model_number,mouth_number])
-	
+	selected_matrix[6][mouth_number]=0
+	mouth_number=(mouth_number+1)%4
+	$Mouth.texture=load("res://assets/Máscara %d/Máscara%d_boca%d.png"%[model_number+1,model_number+1,mouth_number+1])
+	selected_matrix[6][mouth_number]=1
 
 func set_contour(contour_number):
-	
-	if contour_number!=0:
-		self.contour_number=contour_number
-		$Contour.texture=load("res://assets/Máscara %d/Máscara%d_contorno%d.png"%[model_number,model_number,contour_number])
+	selected_matrix[2][contour_number]=0
+	contour_number=(contour_number+1)%4
+	$Contour.texture=load("res://assets/Máscara %d/Máscara%d_contorno%d.png"%[model_number+1,model_number+1,contour_number+1])
+	selected_matrix[2][contour_number]=1
 		
 func set_forehead(forehead_number):
-	if forehead_number!=0:
-		self.forehead_number=forehead_number
-		$Forehead.texture=load("res://assets/Máscara %d/Máscara%d_testa%d.png"%[model_number,model_number,forehead_number])
+	selected_matrix[4][forehead_number]=0
+	forehead_number=(forehead_number+1)%4
+	$Forehead.texture=load("res://assets/Máscara %d/Máscara%d_testa%d.png"%[model_number+1,model_number+1,forehead_number+1])
+	selected_matrix[4][forehead_number]=1
 		
-func set_side(side_number):
-	if side_number!=0:
-		self.side_number=contour_number
-		$Side.texture=load("res://assets/Máscara %d/Máscara%d_lateral%d.png"%[model_number,model_number,side_number])
+func set_side():
+	selected_matrix[3][side_number]=0
+	side_number=(side_number+1)%4
+	$Side.texture=load("res://assets/Máscara %d/Máscara%d_lateral%d.png"%[model_number+1,model_number+1,side_number+1])
+	selected_matrix[3][side_number]=1
+func set_details():
+	details_number=(details_number+1)%4
+	$Details.texture=load("res://assets/Máscara %d/Máscara%d_detalhe%d.png"%[model_number+1,model_number+1,details_number+1])
 		
-func set_details(details_number:int):
-	if details_number!=0:
-		self.details_number=details_number
-		$Details.texture=load("res://assets/Máscara %d/Máscara%d_detalhe%d.png"%[model_number,model_number,details_number])
+func set_arabesque():
+	arabesque_number=(arabesque_number+1)%4
+	$Arabesque.texture=load("res://assets/Máscara %d/Máscara%d_arabesco%d.png"%[model_number+1,model_number+1,arabesque_number+1])
 		
-func set_arabesque(arabesque_number:int):
-	if arabesque_number!=0:
-		self.arabesque_number=arabesque_number
-		$Arabesque.texture=load("res://assets/Máscara %d/Máscara%d_arabesco%d.png"%[model_number,model_number,arabesque_number])
+func set_stones():
+	stones_number=(stones_number+1)%4
+	$Stones.texture=load("res://assets/Máscara %d/Máscara%d_pedras%d.png"%[model_number+1,model_number+1,stones_number+1])
 		
-func set_stones(stones_number:int):
-	if stones_number!=0:
-		self.stones_number=stones_number
-		$Stones.texture=load("res://assets/Máscara %d/Máscara%d_pedras%d.png"%[model_number,model_number,stones_number])
-		
-func set_rod(rod:int):
-	if rod:
+func set_rod():
+	if rod==0:
 		$Rod.texture=load("res://assets/Máscara %d/Máscara%d_haste.png"%[model_number,model_number])
+		rod=1
 	else:
 		$Rod.texture=null
+		rod=0
 
-
-
-	
-#func stats():
-	#var cuteness=model.cuteness+eyes.cuteness+mouth.cuteness
-	#var spookiness=model.spookiness+eyes.spookiness+mouth.spookiness
-	#var elegance=model.eleganceeyes.elegance+mouth.elegance
-	#var total=cuteness+spookiness+elegance
-	#
-	#var stats=[elegance/total,spookiness/total,cuteness/total]
-	#return stats
 	
