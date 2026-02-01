@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://d2mg4bjdmdqsk"]
 
+[ext_resource type="Script" uid="uid://dyrsuppekl77u" path="res://Scripts/hud.gd" id="1_3jfbl"]
 [ext_resource type="Texture2D" uid="uid://scuxedq6emdh" path="res://Assets/Images/GGJ_engrenagem_icone02.png" id="1_chfh5"]
 [ext_resource type="Texture2D" uid="uid://dvjoncm3mweqv" path="res://Assets/Images/GGJ_carta_icone_02.png" id="2_puttd"]
 [ext_resource type="Texture2D" uid="uid://cjml305w6nie7" path="res://Assets/Images/GGJ_check_icone_02.png" id="3_3jfbl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3jfbl"]
+font_size = 30
 
 [node name="Hud" type="Control" unique_id=1201131828]
 layout_mode = 3
@@ -12,6 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
+script = ExtResource("1_3jfbl")
 
 [node name="Configurações" type="Button" parent="." unique_id=1152345061]
 layout_mode = 0
@@ -42,3 +47,17 @@ offset_bottom = 686.0
 icon = ExtResource("3_3jfbl")
 flat = true
 expand_icon = true
+
+[node name="Label" type="Label" parent="." unique_id=82338171]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 114.0
+offset_right = 868.0
+offset_bottom = 678.0
+label_settings = SubResource("LabelSettings_3jfbl")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="Pedido" to="." method="_on_pedido_pressed"]
+[connection signal="pressed" from="Confirmar" to="." method="_on_confirmar_pressed"]

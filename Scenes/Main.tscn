@@ -6,13 +6,19 @@
 [ext_resource type="PackedScene" uid="uid://f0qudvpjsa5j" path="res://Scenes/Pedras.tscn" id="4_v1gob"]
 [ext_resource type="PackedScene" uid="uid://bra2ruhd0q8ll" path="res://Scenes/Gaveta.tscn" id="5_pbw6q"]
 [ext_resource type="PackedScene" uid="uid://cyvvff8q84mv8" path="res://Scenes/mask.tscn" id="6_v1gob"]
+[ext_resource type="PackedScene" uid="uid://bcygg4frbyp33" path="res://Scenes/letter.tscn" id="7_jw32o"]
 
-[node name="Node2D" type="Node2D" unique_id=1323453430]
+[node name="Game" type="Node2D" unique_id=1323453430]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1805127349]
 position = Vector2(686, 364)
 scale = Vector2(0.8171875, 0.8020833)
 texture = ExtResource("1_idj7w")
+
+[node name="Mask" parent="." unique_id=1332497472 instance=ExtResource("6_v1gob")]
+position = Vector2(682, 386)
+
+[node name="Hud" parent="." unique_id=1201131828 instance=ExtResource("3_kln2b")]
 
 [node name="Pedras" parent="." unique_id=1806674113 instance=ExtResource("4_v1gob")]
 offset_left = 982.0001
@@ -33,10 +39,7 @@ offset_top = -331.0
 offset_right = 414.0
 offset_bottom = 44.0
 
-[node name="Hud" parent="." unique_id=1201131828 instance=ExtResource("3_kln2b")]
-
-[node name="Mask" parent="." unique_id=1332497472 instance=ExtResource("6_v1gob")]
-position = Vector2(682, 386)
+[node name="Letter" parent="." unique_id=348843882 instance=ExtResource("7_jw32o")]
 
 [connection signal="pressed" from="Pedras" to="Pedras" method="_on_pressed"]
 [connection signal="pressed" from="Botão Paleta" to="Botão Paleta" method="_on_pressed"]

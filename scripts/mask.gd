@@ -11,16 +11,15 @@ extends Node
 @onready var side_number=0
 @onready var forehead_number=0
 @onready var selected_matrix = [
-	[0, 0, 0],
-	[0, 0, 0],
-	[0, 0, 0],
-	[0, 0, 0],
-	[0, 0, 0],
-	[0, 0, 0],
-	[0, 0, 0],
-	[0, 0, 0],
-	[0, 0, 0],
-	[0, 0, 0]
+	[0, 0, 0, 0],
+	[0, 0, 0, 0],
+	[0, 0, 0, 0],
+	[0, 0, 0, 0],
+	[0, 0, 0, 0],
+	[0, 0, 0, 0],
+	[0, 0, 0, 0],
+	[0, 0, 0, 0],
+	[0, 0, 0, 0]
 ]
 func set_model():
 	selected_matrix[0][model_number]=0
@@ -45,16 +44,16 @@ func set_color():
 	selected_matrix[1][color_number]=1
 	
 func set_eyes(eyes_number:int):
-	selected_matrix[7][eyes_number]=0
+	selected_matrix[6][eyes_number]=0
 	eyes_number=(eyes_number+1)%4
 	$Eyes.texture=load("res://assets/Máscara %d/Máscara%d_olho%d.png"%[model_number+1,model_number+1,eyes_number+1])
-	selected_matrix[7][eyes_number]=1
+	selected_matrix[6][eyes_number]=1
 	
 func set_mouth(mouth_number):
-	selected_matrix[6][mouth_number]=0
+	selected_matrix[5][mouth_number]=0
 	mouth_number=(mouth_number+1)%4
 	$Mouth.texture=load("res://assets/Máscara %d/Máscara%d_boca%d.png"%[model_number+1,model_number+1,mouth_number+1])
-	selected_matrix[6][mouth_number]=1
+	selected_matrix[5][mouth_number]=1
 
 func set_contour(contour_number):
 	selected_matrix[2][contour_number]=0
@@ -78,12 +77,15 @@ func set_details():
 	$Details.texture=load("res://assets/Máscara %d/Máscara%d_detalhe%d.png"%[model_number+1,model_number+1,details_number+1])
 		
 func set_arabesque():
+	selected_matrix[7][arabesque_number]=0
 	arabesque_number=(arabesque_number+1)%4
 	$Arabesque.texture=load("res://assets/Máscara %d/Máscara%d_arabesco%d.png"%[model_number+1,model_number+1,arabesque_number+1])
-		
+	selected_matrix[7][arabesque_number]=1
 func set_stones():
+	selected_matrix[8][stones_number]=0
 	stones_number=(stones_number+1)%4
 	$Stones.texture=load("res://assets/Máscara %d/Máscara%d_pedras%d.png"%[model_number+1,model_number+1,stones_number+1])
+	selected_matrix[8][stones_number]=1
 		
 func set_rod():
 	if rod==0:
